@@ -1,28 +1,15 @@
-// Set the profile picture according to the GitHub username
-const githubUsername = "kenned-candido"; // Replace with your GitHub username
+const useGithubAvatar = false; // true = use GitHub | false = use local image
+const githubUsername = "kenned-candido"; // GitHub User
+const localImagePath = "assets/images/profile.png"; // Local image path
 
-// Select the profile image by ID
+// Select profile picture
 const profilePicture = document.getElementById("profile-picture");
 
-// Update the image with the GitHub avatar
+// Sets the image based on the choice
 if (profilePicture) {
-    profilePicture.src = `https://github.com/${githubUsername}.png`;
-}
-
-// Typing effect for the description
-document.addEventListener("DOMContentLoaded", function () {
-    const textElement = document.getElementById("description");
-    const text = "Back-end developer";
-    let index = 0;
-
-    function typeEffect() {
-        if (index < text.length) {
-            textElement.textContent += text.charAt(index);
-            index++;
-            setTimeout(typeEffect, 100); // Typing speed (100ms per letter)
-        }
+    if (useGithubAvatar) {
+        profilePicture.src = `https://github.com/${githubUsername}.png`;
+    } else {
+        profilePicture.src = localImagePath;
     }
-
-    textElement.textContent = ""; // Clear text before starting
-    typeEffect(); // Start effect on page load
-});
+}
