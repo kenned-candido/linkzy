@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
 
 :root {
-    --background-dark: #0D0E10;
-    --wave-color: #000000;
+    --background-container: #0D0E10;
+    --background-body: radial-gradient(circle at center, #1A1E22, #0D0E10);
     --button-bg: #1A1E22;
     --button-hover: #2b3036;
     --text-primary: #B7A99A;
@@ -17,9 +16,8 @@
     box-sizing: border-box;
 }
 
-/* Global Styles */
 body {
-    background-color: var(--wave-color);
+    background: var(--background-body);
     color: var(--text-primary);
     display: flex;
     flex-direction: column;
@@ -35,27 +33,14 @@ body {
     width: 90%;
     max-width: 400px;
     margin: 0 auto;
-    padding: 0 16px 100px;
+    padding: 32px 16px 40px;
+    background-color: var(--background-container);
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     padding-bottom: 100px;
 }
 
-/* Wave Background */
-.wave-background {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 40vh;
-    background-color: transparent;
-    z-index: -1;
-}
-
-.wave {
-    width: 100%;
-    height: 100%;
-}
-
-/* Profile Section */
+/* Header Styles */
 .profile-picture {
     width: 120px;
     height: 120px;
@@ -66,9 +51,9 @@ body {
 .name {
     font-size: 32px;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 0px;
     color: var(--text-primary);
-    font-family: 'Inter', sans-serif;
+    font-family: 'JetBrains Mono', monospace;
 }
 
 .username {
@@ -76,20 +61,34 @@ body {
     color: var(--text-secondary);
     font-family: 'JetBrains Mono', monospace;
     margin-top: 0px;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     opacity: 0.7;
 }
 
-.description {
-    font-size: 16px;
-    color: var(--text-secondary);
-    opacity: 0.8;
-    margin-top: 0px;
-    margin-bottom: 20px;
-    font-family: 'JetBrains Mono', monospace;
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    margin: 12px 0 12px;
 }
 
-/* Links Section */
+.social-links a {
+    display: incline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background color 0.3s ease, transform 0.2s ease;
+}
+
+.social-links img {
+    width: 27px;
+    height: 27px;
+}
+
+/* main styles */
 .links-container {
     display: flex;
     justify-content: center;
@@ -136,6 +135,34 @@ body {
     content: "";
     display: block;
     height: 10vh;
+}
+
+/* Footer Styles */
+.footer-links {
+    margin-top: 40px;
+    font-size: 10px;
+    font-family: 'JetBrains Mono', monospace;
+    opacity: 0.8;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.footer-links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.footer-links span {
+    color: var(--text-primary);
+    opacity: 0.6;
 }
 
 /* Responsive Styles */
