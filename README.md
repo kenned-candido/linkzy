@@ -12,7 +12,7 @@ It’s **100% open source** and super easy to tweak in the code. Whether you’r
 
 With Linkzy, your links stay neatly organized, your profile is fast and responsive, and it works perfectly on any device — **your way, without complications.**
 
-[**Documentation**]()
+[**Documentation**](https://github.com/kenned-candido/Linkzy/wiki)
 
 ---
 
