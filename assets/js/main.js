@@ -13,3 +13,25 @@ if (profilePicture) {
         profilePicture.src = localImagePath;
     }
 }
+
+// Modal Donate
+const donateBtn = document.getElementById("donate-btn");
+const donateModal = document.getElementById("donate-modal");
+const closeModal = document.querySelector(".close");
+
+if (donateBtn && donateModal && closeModal) {
+    donateBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        donateModal.style.display = "flex";
+    });
+
+    closeModal.addEventListener("click", () => {
+        donateModal.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+        if (e.target === donateModal) {
+            donateModal.style.display = "none";
+        }
+    });
+}
