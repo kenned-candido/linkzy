@@ -53,7 +53,7 @@ body {
     font-weight: bold;
     margin-top: 0px;
     color: var(--text-primary);
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'JetBrains', monospace;
 }
 
 .username {
@@ -165,7 +165,7 @@ body {
     opacity: 0.6;
 }
 
-/* Modal Styles */
+/* Modal Donate Styles */
 .modal {
     display: none;
     position: fixed;
