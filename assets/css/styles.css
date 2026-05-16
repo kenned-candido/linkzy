@@ -3,11 +3,11 @@
 
 :root {
     --background-container: #0D0E10;
-    --background-body: radial-gradient(circle at center, #1A1E22, #0D0E10);
+    --background-body: radial-gradient(circle at center, #1A1E22 0%, #0D0E10 75%);
     --button-bg: #1A1E22;
-    --button-hover: #2b3036;
-    --text-primary: #B7A99A;
-    --text-secondary: #8C9094;
+    --button-hover: #4A545E;
+    --text-primary: #E3DDD5;
+    --text-secondary: #AAB0B6;
 }
 
 * {
