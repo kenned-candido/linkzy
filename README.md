@@ -1,25 +1,37 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=1A1E22&height=85&section=header"/>
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=700&size=32&pause=1000&color=B7A99A&center=true&vCenter=true&repeat=true&width=1000&lines=Linkzy+%E2%80%94+Your+Minimalist+Link+Hub)](https://git.io/typing-svg)
-
-![Preview](docs/readme-preview.png)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=700&size=32&pause=1000&color=E3DDD5&center=true&vCenter=true&repeat=true&width=1000&lines=Linkzy+%E2%80%94+kenned.candido's+Live+Page)](https://git.io/typing-svg)
 
 ---
 
-Linkzy is your simple, elegant, and fully customizable link-in-bio.
-
-It’s **100% open source** and super easy to tweak in the code. Whether you’re just starting out or already experienced with programming, you can organize your links and customize the style your way.
-
-With Linkzy, your links stay neatly organized, your profile is fast and responsive, and it works perfectly on any device — **your way, without complications.**
-
-[Documentation](https://github.com/kenned-candido/Linkzy/wiki)
+>[!NOTE]
+>**This is the pages branch.** This is where kenned.candido's own Linkzy lives. It is deployed via GitHub Pages and updated whenever the developer branch is merged in.
 
 ---
 
-## Donate
+## Purpose
 
-If you enjoy using Linkzy and want to support the project, consider making a small donation. Every contribution helps keep development going and improves the project for everyone!
+This branch serves the live version of Linkzy at:
 
-[![Donate](https://img.shields.io/badge/-❤️%20Donate-0D1117?style=for-the-badge&labelColor=0D1117)](https://www.sourcebr.com.br/doar)
+**[kenned-candido.github.io/linkzy](https://kenned-candido.github.io/linkzy)**
+
+It contains personal data and is not meant to be used as a template. If you want your own Linkzy, head to `main`.
+
+## Branch Flow
+
+developer → pages   (changes go live with personal data)
+developer → main    (same changes, personal data removed for the public template)
+
+## Branches
+
+| Branch | Purpose |
+|---|---|
+| `main` | Clean template — ready to fork and customize |
+| `pages` | Live demo — kenned.candido's own Linkzy |
+| `developer` | Development branch — work in progress |
+
+---
+
+[![Donate](https://img.shields.io/badge/-❤️%20Donate-1A1E22?style=for-the-badge&logoColor=E3DDD5&labelColor=0D0E10)](https://kenned-candido.github.io/linkzy/#donate-modal)
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=1A1E22&height=85&section=footer"/>
