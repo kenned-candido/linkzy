@@ -1,6 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
+/* ================================================
+   Fonts
+   ================================================ */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap');
 
+/* ================================================
+   Variables
+   ================================================ */
 :root {
     --background-container: #0D0E10;
     --background-body: radial-gradient(circle at center, #1A1E22 0%, #0D0E10 75%);
@@ -10,12 +15,18 @@
     --text-secondary: #AAB0B6;
 }
 
+/* ================================================
+   Reset
+   ================================================ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ================================================
+   Base
+   ================================================ */
 body {
     background: var(--background-body);
     color: var(--text-primary);
@@ -28,19 +39,23 @@ body {
     overflow-x: hidden;
 }
 
+/* ================================================
+   Container
+   ================================================ */
 .container {
     text-align: center;
     width: 90%;
     max-width: 400px;
     margin: 0 auto;
-    padding: 32px 16px 40px;
+    padding: 32px 16px 100px;
     background-color: var(--background-container);
     border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    padding-bottom: 100px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* Header Styles */
+/* ================================================
+   Header
+   ================================================ */
 .profile-picture {
     width: 120px;
     height: 120px;
@@ -51,16 +66,14 @@ body {
 .name {
     font-size: 32px;
     font-weight: bold;
-    margin-top: 0px;
     color: var(--text-primary);
-    font-family: 'JetBrains', monospace;
+    font-family: 'JetBrains Mono', monospace;
 }
 
 .username {
     font-size: 14px;
     color: var(--text-secondary);
     font-family: 'JetBrains Mono', monospace;
-    margin-top: 0px;
     margin-bottom: 10px;
     opacity: 0.7;
 }
@@ -68,19 +81,18 @@ body {
 .social-links {
     display: flex;
     justify-content: center;
-    gap: 0px;
-    margin: 12px 0 12px;
+    margin: 12px 0;
 }
 
 .social-links a {
-    display: incline-flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background-color: transparent;
-    transition: background color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .social-links img {
@@ -88,16 +100,9 @@ body {
     height: 27px;
 }
 
-/* main styles */
-.links-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 40px;
-    width: 100%;
-}
-
+/* ================================================
+   Links (main)
+   ================================================ */
 .links {
     display: flex;
     flex-direction: column;
@@ -115,15 +120,15 @@ body {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-    transition: transform .2s ease, box-shadow .2s ease, background-color .3s;
     font-family: 'Source Code Pro', monospace;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
 }
 
 .link:hover {
     background-color: var(--button-hover);
     transform: scale(1.05) translateY(2px);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .link:focus {
@@ -137,7 +142,9 @@ body {
     height: 10vh;
 }
 
-/* Footer Styles */
+/* ================================================
+   Footer
+   ================================================ */
 .footer-links {
     margin-top: 40px;
     font-size: 10px;
@@ -165,31 +172,31 @@ body {
     opacity: 0.6;
 }
 
-/* Modal Donate Styles */
+/* ================================================
+   Modal
+   ================================================ */
 .modal {
     display: none;
     position: fixed;
     z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.4);
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(4px);
     justify-content: center;
     align-items: center;
 }
 
 .modal-content {
+    position: relative;
     background: var(--background-container);
     padding: 2rem;
     border-radius: 1rem;
     width: 90%;
     max-width: 400px;
     text-align: center;
-    font-family: jetbrains-mono, monospace;
+    font-family: 'JetBrains Mono', monospace;
     color: var(--text-primary);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     animation: fadeIn 0.3s ease;
 }
 
@@ -198,9 +205,13 @@ body {
     top: 15px;
     right: 20px;
     font-size: 2rem;
+    line-height: 1;
     cursor: pointer;
     color: var(--text-secondary);
+    background: none;
+    border: none;
 }
+
 .close:hover {
     color: #ffffff;
 }
@@ -219,10 +230,11 @@ body {
     background: var(--button-bg);
     color: var(--text-primary);
     text-decoration: none;
-    font-family: 'source-code-pro', monospace;
+    font-family: 'Source Code Pro', monospace;
     font-weight: bold;
-    transition: 0.3s;
+    transition: background-color 0.3s ease;
 }
+
 .donate-link:hover {
     background: var(--button-hover);
 }
@@ -233,37 +245,36 @@ body {
     padding: 1rem;
     border-radius: 0.5rem;
 }
+
 .pix-qr {
     width: 120px;
     margin: 10px 0;
 }
+
 .pix-key {
     font-size: 0.9rem;
-    font-family: jetbrains-mono, monospace;
+    font-family: 'JetBrains Mono', monospace;
     color: var(--text-secondary);
 }
 
+/* ================================================
+   Animations
+   ================================================ */
 @keyframes fadeIn {
-    from {opacity: 0; transform: scale(0.9);}
-    to {opacity: 1; transform: scale(1);}
+    from { opacity: 0; transform: scale(0.9); }
+    to   { opacity: 1; transform: scale(1); }
 }
 
-/* Responsive Styles */
+/* ================================================
+   Responsive
+   ================================================ */
 @media (min-width: 600px) {
-  .profile-picture {
-    width: 120px;
-    height: 120px;
-  }
-  .name {
-    font-size: 36px;
-  }
+    .name {
+        font-size: 36px;
+    }
 
-  .description {
-    font-size: 18px;
-  }
-
-  .link {
-    font-size: 22px;
-    padding: 24px;
-  }
+    .link {
+        font-size: 22px;
+        padding: 24px;
+    }
 }
