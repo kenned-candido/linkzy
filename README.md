@@ -2,7 +2,7 @@
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=JetBrains+Mono&weight=700&size=32&pause=1000&color=B7A99A&center=true&vCenter=true&repeat=true&width=1000&lines=Linkzy+%E2%80%94+Your+Minimalist+Link+Hub)](https://git.io/typing-svg)
 
-![Preview](assets/images/readme-preview.png)
+![Preview](docs/readme-preview.png)
 
 ---
 
