@@ -80,10 +80,16 @@ body {
     height: 40px;
     border-radius: 50%;
     background-color: transparent;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: var(--text-secondary);
+    transition: color 0.3s ease, transform 0.2s ease;
 }
 
-.social-links img {
+.social-links a:hover {
+    color: var(--text-primary);
+    transform: scale(1.15);
+}
+
+.social-links svg {
     width: 27px;
     height: 27px;
 }
