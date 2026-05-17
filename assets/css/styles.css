@@ -1,11 +1,7 @@
-/* ================================================
-   Fonts
-   ================================================ */
+/* Fonts */
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap');
 
-/* ================================================
-   Variables
-   ================================================ */
+/* Variables */
 :root {
     --background-container: #0D0E10;
     --background-body: radial-gradient(circle at center, #1A1E22 0%, #0D0E10 75%);
@@ -15,18 +11,14 @@
     --text-secondary: #AAB0B6;
 }
 
-/* ================================================
-   Reset
-   ================================================ */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ================================================
-   Base
-   ================================================ */
+/* Base */
 body {
     background: var(--background-body);
     color: var(--text-primary);
@@ -39,9 +31,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ================================================
-   Container
-   ================================================ */
+/* Container */
 .container {
     text-align: center;
     width: 90%;
@@ -53,9 +43,7 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* ================================================
-   Header
-   ================================================ */
+/* Header */
 .profile-picture {
     width: 120px;
     height: 120px;
@@ -100,9 +88,7 @@ body {
     height: 27px;
 }
 
-/* ================================================
-   Links (main)
-   ================================================ */
+/* Links */
 .links {
     display: flex;
     flex-direction: column;
@@ -142,9 +128,7 @@ body {
     height: 10vh;
 }
 
-/* ================================================
-   Footer
-   ================================================ */
+/* Footer */
 .footer-links {
     margin-top: 40px;
     font-size: 10px;
@@ -172,9 +156,7 @@ body {
     opacity: 0.6;
 }
 
-/* ================================================
-   Modal
-   ================================================ */
+/* Modal */
 .modal {
     display: none;
     position: fixed;
@@ -257,17 +239,13 @@ body {
     color: var(--text-secondary);
 }
 
-/* ================================================
-   Animations
-   ================================================ */
+/* Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: scale(0.9); }
     to   { opacity: 1; transform: scale(1); }
 }
 
-/* ================================================
-   Responsive
-   ================================================ */
+/* Responsive */
 @media (min-width: 600px) {
     .name {
         font-size: 36px;
