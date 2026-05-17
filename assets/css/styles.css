@@ -1,7 +1,23 @@
 /* Fonts */
+/*
+    Default fonts are JetBrains Mono and Source Code Pro.
+    You can replace them with any Google Fonts of your choice.
+    To find fonts, visit: https://fonts.google.com
+*/
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap');
 
 /* Variables */
+/*
+    Customize your theme here.
+    These variables control the colors across the entire page.
+
+    --background-body:      page background (supports gradients)
+    --background-container: card background
+    --button-bg:            link button background
+    --button-hover:         link button hover background
+    --text-primary:         main text and icon color
+    --text-secondary:       secondary text and icon color
+*/
 :root {
     --background-container: #0D0E10;
     --background-body: radial-gradient(circle at center, #1A1E22 0%, #0D0E10 75%);
@@ -55,13 +71,13 @@ body {
     font-size: 32px;
     font-weight: bold;
     color: var(--text-primary);
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'JetBrains Mono', monospace; /* change to your chosen font */
 }
 
 .username {
     font-size: 14px;
     color: var(--text-secondary);
-    font-family: 'JetBrains Mono', monospace;
+    font-family: 'JetBrains Mono', monospace; /* change to your chosen font */
     margin-bottom: 10px;
     opacity: 0.7;
 }
@@ -94,6 +110,16 @@ body {
     height: 27px;
 }
 
+/*
+    Some icons may appear smaller due to their internal proportions.
+    If that happens, add a class to that specific svg (e.g. "icon-lg")
+    and override the size here:
+
+    .social-links svg.icon-lg {
+        width: 31px;
+        height: 31px;
+    }
+*/
 .social-links svg.icon-linkedin {
     width: 31px;
     height: 31px;
@@ -117,7 +143,7 @@ body {
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-    font-family: 'Source Code Pro', monospace;
+    font-family: 'Source Code Pro', monospace; /* change to your chosen font */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
 }
