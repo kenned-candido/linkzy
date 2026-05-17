@@ -94,6 +94,11 @@ body {
     height: 27px;
 }
 
+.social-links svg.icon-linkedin {
+    width: 31px;
+    height: 31px;
+}
+
 /* Links */
 .links {
     display: flex;
