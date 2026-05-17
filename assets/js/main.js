@@ -40,4 +40,9 @@ if (donateBtn && donateModal && closeBtn) {
     window.addEventListener("keydown", (e) => {
         if (e.key === "Escape") closeModal();
     });
+
+    /* Auto-open modal if URL contains #donate-modal */
+    if (window.location.hash === "#donate-modal") {
+        openModal();
+    }
 }
