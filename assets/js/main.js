@@ -1,6 +1,11 @@
 /* Config */
+/*
+    useGithubAvatar: set to true to use your GitHub profile picture automatically.
+    githubUsername:  your GitHub username (used only if useGithubAvatar is true).
+    localImagePath:  path to your local profile image (used if useGithubAvatar is false).
+*/
 const useGithubAvatar = false; // true = GitHub avatar | false = local image
-const githubUsername = "kenned-candido";
+const githubUsername = "yourusername";
 const localImagePath = "assets/images/profile.png";
 
 /* Profile picture */
@@ -13,6 +18,10 @@ if (profilePicture) {
 }
 
 /* Donate modal */
+/*
+    This modal supports the original Linkzy project.
+    Please consider keeping it — it helps the project stay alive. :)
+*/
 const donateBtn = document.getElementById("donate-btn");
 const donateModal = document.getElementById("donate-modal");
 const closeBtn = document.querySelector(".close");
