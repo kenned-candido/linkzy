@@ -1,37 +1,43 @@
-const useGithubAvatar = false; // true = use GitHub | false = use local image
-const githubUsername = "kenned-candido"; // GitHub User
-const localImagePath = "assets/images/profile.png"; // Local image path
+/* Config */
+const useGithubAvatar = false; // true = GitHub avatar | false = local image
+const githubUsername = "kenned-candido";
+const localImagePath = "assets/images/profile.png";
 
-// Select profile picture
+/* Profile picture */
 const profilePicture = document.getElementById("profile-picture");
 
-// Sets the image based on the choice
 if (profilePicture) {
-    if (useGithubAvatar) {
-        profilePicture.src = `https://github.com/${githubUsername}.png`;
-    } else {
-        profilePicture.src = localImagePath;
-    }
+    profilePicture.src = useGithubAvatar
+        ? `https://github.com/${githubUsername}.png`
+        : localImagePath;
 }
 
-// Modal Donate
+/* Donate modal */
 const donateBtn = document.getElementById("donate-btn");
 const donateModal = document.getElementById("donate-modal");
-const closeModal = document.querySelector(".close");
+const closeBtn = document.querySelector(".close");
 
-if (donateBtn && donateModal && closeModal) {
+function openModal() {
+    donateModal.style.display = "flex";
+}
+
+function closeModal() {
+    donateModal.style.display = "none";
+}
+
+if (donateBtn && donateModal && closeBtn) {
     donateBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        donateModal.style.display = "flex";
+        openModal();
     });
 
-    closeModal.addEventListener("click", () => {
-        donateModal.style.display = "none";
-    });
+    closeBtn.addEventListener("click", closeModal);
 
     window.addEventListener("click", (e) => {
-        if (e.target === donateModal) {
-            donateModal.style.display = "none";
-        }
+        if (e.target === donateModal) closeModal();
+    });
+
+    window.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeModal();
     });
 }
