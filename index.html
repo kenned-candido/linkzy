@@ -3,67 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Linkzy</title>
-    <link rel="icon" href="assets/images/svg/mdi--link-variant.svg" type="image/x-icon">
+
+    <!-- Primary Meta -->
+    <title>Kenned | Linkzy</title>
+    <meta name="description" content="@kenned.candido — Back-end developer. Find all my links in one place.">
+    <link rel="icon" href="assets/images/svg/mdi--link-variant.svg" type="image/svg+xml">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <!-- META Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://kenned-candido.github.io/linkzy/" />
-    <meta property="og:title" content="Kenned" />
-    <meta property="og:description" content="@kenned.candido | Back-end developer" />
-    <meta property="og:site_name" content="Linkzy" />
-    <meta name="theme-color" content="#1A1E22" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kenned-candido.github.io/linkzy/">
+    <meta property="og:title" content="Kenned">
+    <meta property="og:description" content="@kenned.candido | Back-end developer">
+    <meta property="og:site_name" content="Linkzy">
+    <meta name="theme-color" content="#1A1E22">
 </head>
 <body>
+
     <div class="container">
+
+        <!-- Profile Header -->
         <header>
-            <img id="profile-picture" alt="profile picture" class="profile-picture">
+            <!--
+                Profile picture source is set by main.js.
+                To change it, edit the variables at the top of assets/js/main.js:
+                  - useGithubAvatar: true = pull from GitHub, false = use local file
+                  - githubUsername: your GitHub username
+                  - localImagePath: path to your local image
+            -->
+            <img id="profile-picture" class="profile-picture" alt="Kenned's profile picture">
+
             <h1 class="name">Kenned</h1>
             <p class="username">@kenned.candido</p>
-            <div class="social-links">
-                <a href="https://github.com/kenned-candido" target="_blank">
+
+            <!-- Social icon links -->
+            <nav class="social-links" aria-label="Social media">
+                <a href="https://github.com/kenned-candido" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                     <img src="assets/images/social-links/github.png" alt="GitHub">
                 </a>
-                <a href="https://www.linkedin.com/in/kenned-candido/" target="_blank">
+                <a href="https://www.linkedin.com/in/kenned-candido/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                     <img src="assets/images/social-links/linkedin.png" alt="LinkedIn">
                 </a>
-                <a href="https://www.instagram.com/kenned.candido/" target="_blank">
+                <a href="https://www.instagram.com/kenned.candido/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                     <img src="assets/images/social-links/instagram.png" alt="Instagram">
                 </a>
-            </div>
+            </nav>
         </header>
+
+        <!-- Main link list -->
         <main>
-            <nav class="links">
+            <nav class="links" aria-label="Links">
                 <a href="mailto:kenned.candido@pm.me" class="link">E-MAIL</a>
-                <a href="https://www.youtube.com/@kenned.candido" class="link">YOUTUBE</a>
-                <a href="https://steamcommunity.com/id/kenned-candido/" class="link">STEAM</a>
-                <a href="https://discord.com/users/1100527402163126433" class="link">DISCORD</a>
+                <a href="https://www.youtube.com/@kenned.candido" class="link" target="_blank" rel="noopener noreferrer">YOUTUBE</a>
+                <a href="https://steamcommunity.com/id/kenned-candido/" class="link" target="_blank" rel="noopener noreferrer">STEAM</a>
+                <a href="https://discord.com/users/1100527402163126433" class="link" target="_blank" rel="noopener noreferrer">DISCORD</a>
             </nav>
         </main>
+
+        <!-- Footer -->
         <footer class="footer-links">
-            <a href="https://github.com/kenned-candido/Linkzy" target="_blank">GitHub</a>
-            <span>•</span>
-            <a href="https://github.com/kenned-candido/Linkzy/issues">Report Bug</a>
-            <span>•</span>
-            <a href="#" id="donate-btn">Donate</a>
+            <a href="https://github.com/kenned-candido/Linkzy" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <span aria-hidden="true">•</span>
+            <a href="https://github.com/kenned-candido/Linkzy/issues" target="_blank" rel="noopener noreferrer">Report Bug</a>
+            <span aria-hidden="true">•</span>
+            <!-- Opens the donate modal (controlled by main.js) -->
+            <a href="#donate-modal" id="donate-btn">Donate</a>
         </footer>
-        <div id="donate-modal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>SUPPORT MY WORK</h2>
-                <p>Choose a way to support:</p>
-                <div class="donate-options">
-                    <a href="https://github.com/sponsors/kenned-candido" target="_blank" class="donate-link">GitHub Sponsors</a>
-                    <a href="https://www.paypal.com/donate/?business=AUZRQZ6DZZAPQ&no_recurring=0&currency_code=USD" target="_blank" class="donate-link">PayPal</a>
-                    <div class="pix-box">
-                        <p><strong>PIX:</strong></p>
-                        <img src="assets/images/pix-qrcode.png" alt="Pix QR Code" class="pix-qr">
-                        <p class="pix-key">a3eedbcc-64a3-4a26-94bd-e0b1041a817a</p>
-                    </div>
+
+    </div><!-- /.container -->
+
+    <!-- Donate Modal (global overlay, outside .container intentionally) -->
+    <div id="donate-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="donate-title">
+        <div class="modal-content">
+            <button class="close" aria-label="Close donation modal">&times;</button>
+            <h2 id="donate-title">SUPPORT MY WORK</h2>
+            <p>Choose a way to support:</p>
+            <div class="donate-options">
+                <a href="https://github.com/sponsors/kenned-candido" target="_blank" rel="noopener noreferrer" class="donate-link">GitHub Sponsors</a>
+                <a href="https://www.paypal.com/donate/?business=AUZRQZ6DZZAPQ&no_recurring=0&currency_code=USD" target="_blank" rel="noopener noreferrer" class="donate-link">PayPal</a>
+                <div class="pix-box">
+                    <p><strong>PIX:</strong></p>
+                    <img src="assets/images/pix-qrcode.png" alt="PIX QR Code" class="pix-qr">
+                    <p class="pix-key">a3eedbcc-64a3-4a26-94bd-e0b1041a817a</p>
                 </div>
             </div>
         </div>
     </div>
+
     <script src="assets/js/main.js"></script>
 </body>
 </html>
