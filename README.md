@@ -14,17 +14,6 @@ It's **100% open source** and built to be easy to tweak, whether you're just sta
 
 ---
 
-## Features
-
-- 🎨 Fully customizable theme via CSS variables
-- 🖼️ Profile picture via GitHub avatar or local image
-- 🔗 Add as many links as you want
-- 💬 Social icon links with SVG support
-- 📱 Responsive — works on any device
-- ⚡ No frameworks, no build tools, no dependencies
-
----
-
 ## Getting Started
 
 1. Fork or download this repository
@@ -32,8 +21,6 @@ It's **100% open source** and built to be easy to tweak, whether you're just sta
 3. Edit `:root` in `assets/css/styles.css` to set your colors
 4. Edit the config block in `assets/js/main.js` to set your profile picture
 5. Deploy to GitHub Pages, Netlify, Vercel, or any static host
-
-Full setup guide → [Wiki](https://github.com/kenned-candido/Linkzy/wiki)
 
 ---
 
