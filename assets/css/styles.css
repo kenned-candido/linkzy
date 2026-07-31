@@ -231,24 +231,6 @@ body {
     background: var(--button-hover);
 }
 
-.pix-box {
-    margin-top: 1rem;
-    background: var(--button-bg);
-    padding: 1rem;
-    border-radius: 0.5rem;
-}
-
-.pix-qr {
-    width: 120px;
-    margin: 10px 0;
-}
-
-.pix-key {
-    font-size: 0.9rem;
-    font-family: 'JetBrains Mono', monospace;
-    color: var(--text-secondary);
-}
-
 /* Animations */
 @keyframes fadeIn {
     from { opacity: 0; transform: scale(0.9); }
