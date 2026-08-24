@@ -18,11 +18,11 @@ const donateModal = document.getElementById("donate-modal");
 const closeBtn = document.querySelector(".close");
 
 function openModal() {
-    donateModal.style.display = "flex";
+    if (donateModal) donateModal.style.display = "flex";
 }
 
 function closeModal() {
-    donateModal.style.display = "none";
+    if (donateModal) donateModal.style.display = "none";
 }
 
 if (donateBtn && donateModal && closeBtn) {
@@ -45,4 +45,26 @@ if (donateBtn && donateModal && closeBtn) {
     if (window.location.hash === "#donate-modal") {
         openModal();
     }
+}
+
+/* Subtle Interactive Tilt Effect for Desktop Devices */
+const container = document.querySelector('.container');
+if (container && window.matchMedia('(pointer: fine)').matches) {
+    container.addEventListener('mousemove', (e) => {
+        const rect = container.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        const rotateX = (-y / rect.height) * 6;
+        const rotateY = (x / rect.width) * 6;
+        container.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) translateY(-2px)`;
+    });
+
+    container.addEventListener('mouseleave', () => {
+        container.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+        container.style.transition = 'transform 0.5s ease';
+    });
+
+    container.addEventListener('mouseenter', () => {
+        container.style.transition = 'transform 0.1s ease-out';
+    });
 }

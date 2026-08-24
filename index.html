@@ -30,6 +30,10 @@
 </head>
 <body>
 
+    <!-- Ambient background glows -->
+    <div class="ambient-glow glow-1" aria-hidden="true"></div>
+    <div class="ambient-glow glow-2" aria-hidden="true"></div>
+
     <div class="container">
 
         <!-- Profile Header -->
@@ -41,9 +45,12 @@
                   - githubUsername: your GitHub username
                   - localImagePath: path to your local image
             -->
-            <img id="profile-picture" class="profile-picture" alt="Kenned's profile picture">
+            <div class="avatar-wrapper">
+                <img id="profile-picture" class="profile-picture" alt="Kenned's profile picture">
+            </div>
 
             <h1 class="name">Kenned</h1>
+            <p class="bio">Full-Stack Developer</p>
 
             <!-- Social icon links -->
             <nav class="social-links" aria-label="Social media">
